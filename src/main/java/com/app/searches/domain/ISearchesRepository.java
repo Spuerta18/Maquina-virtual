@@ -1,4 +1,4 @@
-package com.app.restaurants.domain;
+package com.app.searches.domain;
 
 import java.util.List;
 import java.util.Optional;
@@ -8,22 +8,22 @@ import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface IUserRepository extends JpaRepository<Restaurants, Long> {
+public interface ISearchesRepository extends JpaRepository<Searches, Long> {
 
     // Get all users (already provided by JpaRepository)
     @Override
     @NonNull
-    List<Restaurants> findAll();
+    List<Searches> findAll();
 
     // Search user by ID (already provided by JpaRepository)
     @Override
     @NonNull
-    Optional<Restaurants> findById(@NonNull Long id);
+    Optional<Searches> findById(@NonNull Long id);
 
     // Save a user (already provided by JpaRepository)
     @Override
     @NonNull
-    <S extends Restaurants> S save(@NonNull S user);
+    <S extends Searches> S save(@NonNull S Searches);
 
     // Check if a user with a specific ID exists (already provided by JpaRepository)
     @Override
@@ -36,7 +36,7 @@ public interface IUserRepository extends JpaRepository<Restaurants, Long> {
     // Additional application-specific methods:
 
     // Search for a user by their email
-    Optional<Restaurants> findByEmail(String email);
+    Optional<Searches> findByEmail(String email);
 
     // Check if an email is already registered
     boolean existsByEmail(String email);

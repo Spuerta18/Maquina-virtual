@@ -1,4 +1,4 @@
-package com.app.museums.domain;
+package com.app.hotels.domain;
 
 import java.util.List;
 import java.util.Optional;
@@ -8,22 +8,22 @@ import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface IUserRepository extends JpaRepository<Museums, Long> {
+public interface IHotelsRepository extends JpaRepository<Hotels, Long> {
 
     // Get all users (already provided by JpaRepository)
     @Override
     @NonNull
-    List<Museums> findAll();
+    List<Hotels> findAll();
 
     // Search user by ID (already provided by JpaRepository)
     @Override
     @NonNull
-    Optional<Museums> findById(@NonNull Long id);
+    Optional<Hotels> findById(@NonNull Long id);
 
     // Save a user (already provided by JpaRepository)
     @Override
     @NonNull
-    <S extends Museums> S save(@NonNull S user);
+    <S extends Hotels> S save(@NonNull S Hotels);
 
     // Check if a user with a specific ID exists (already provided by JpaRepository)
     @Override
@@ -36,7 +36,7 @@ public interface IUserRepository extends JpaRepository<Museums, Long> {
     // Additional application-specific methods:
 
     // Search for a user by their email
-    Optional<Museums> findByEmail(String email);
+    Optional<Hotels> findByEmail(String email);
 
     // Check if an email is already registered
     boolean existsByEmail(String email);

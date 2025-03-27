@@ -8,7 +8,7 @@ import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface IUserRepository extends JpaRepository<Destinations, Long> {
+public interface IDestinationsRepository extends JpaRepository<Destinations, Long> {
 
     // Get all users (already provided by JpaRepository)
     @Override
@@ -23,7 +23,7 @@ public interface IUserRepository extends JpaRepository<Destinations, Long> {
     // Save a user (already provided by JpaRepository)
     @Override
     @NonNull
-    <S extends Destinations> S save(@NonNull S user);
+    <S extends Destinations> S save(@NonNull S Destination);
 
     // Check if a user with a specific ID exists (already provided by JpaRepository)
     @Override
