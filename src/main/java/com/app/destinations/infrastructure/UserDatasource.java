@@ -1,4 +1,4 @@
-package com.app.users.infrastructure;
+package com.app.destinations.infrastructure;
 
 import java.util.List;
 import java.util.Optional;

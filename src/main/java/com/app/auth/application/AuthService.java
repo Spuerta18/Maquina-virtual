@@ -18,7 +18,7 @@ import com.app.auth.infrastructure.dto.AuthResponse;
 import com.app.auth.infrastructure.dto.ProfileResponse;
 import com.app.auth.infrastructure.dto.RegisterRequest;
 import com.app.users.domain.IUserRepository;
-import com.app.users.domain.User;
+import com.app.users.domain.Users;
 
 import lombok.RequiredArgsConstructor;
 
@@ -51,7 +51,7 @@ public class AuthService {
             throw new RuntimeException("Email already exists");
         }
 
-        User user = new User();
+        Users user = new Users();
         user.setEmail(request.getEmail());
         user.setName(request.getName());
         user.setPassword(passwordEncoder.encode(request.getPassword()));

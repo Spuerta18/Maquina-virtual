@@ -1,4 +1,4 @@
-package com.app.users.adapters;
+package com.app.hotels.adapters;
 
 import java.util.List;
 

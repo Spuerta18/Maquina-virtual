@@ -4,9 +4,9 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
-@Table(name = "users")
+@Table(name = "Users")
 @Data
-public class User {
+public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -20,15 +20,19 @@ public class User {
     @Column(nullable = false)
     private String password;
 
+    @Column(nullable = false)
+    private String registration_date;
+
     // Empty constructor (required for JPA)
-    public User() {}
+    public Users() {}
 
     // Constructor with parameters
-    public User(Long id, String name, String email, String password) {
+    public Users(Long id, String name, String email, String password, String registration_date) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.password = password;
+        this.registration_date = registration_date;
     }
 
     // Getters y Setters
@@ -63,4 +67,13 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public String getRegistration_date() {
+        return this.registration_date;
+    }
+
+    public void setRegistration_date(String registration_date) {
+        this.registration_date = registration_date;
+    }
+
 }

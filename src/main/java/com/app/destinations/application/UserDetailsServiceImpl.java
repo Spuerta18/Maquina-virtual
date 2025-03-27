@@ -1,4 +1,4 @@
-package com.app.users.application;
+package com.app.destinations.application;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.app.users.domain;
+package com.app.hotels.domain;
 
 import java.util.List;
 import java.util.Optional;
@@ -8,22 +8,22 @@ import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface IUserRepository extends JpaRepository<Users, Long> {
+public interface IUserRepository extends JpaRepository<Hotels, Long> {
 
     // Get all users (already provided by JpaRepository)
     @Override
     @NonNull
-    List<Users> findAll();
+    List<Hotels> findAll();
 
     // Search user by ID (already provided by JpaRepository)
     @Override
     @NonNull
-    Optional<Users> findById(@NonNull Long id);
+    Optional<Hotels> findById(@NonNull Long id);
 
     // Save a user (already provided by JpaRepository)
     @Override
     @NonNull
-    <S extends Users> S save(@NonNull S user);
+    <S extends Hotels> S save(@NonNull S user);
 
     // Check if a user with a specific ID exists (already provided by JpaRepository)
     @Override
@@ -36,7 +36,7 @@ public interface IUserRepository extends JpaRepository<Users, Long> {
     // Additional application-specific methods:
 
     // Search for a user by their email
-    Optional<Users> findByEmail(String email);
+    Optional<Hotels> findByEmail(String email);
 
     // Check if an email is already registered
     boolean existsByEmail(String email);

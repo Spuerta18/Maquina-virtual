@@ -1,4 +1,4 @@
-package com.app.users.application;
+package com.app.hotels.application;
 
 import java.util.ArrayList;
 
