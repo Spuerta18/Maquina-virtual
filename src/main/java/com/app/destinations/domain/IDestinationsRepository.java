@@ -23,7 +23,7 @@ public interface IDestinationsRepository extends JpaRepository<Destinations, Lon
     // Save a user (already provided by JpaRepository)
     @Override
     @NonNull
-    <S extends Destinations> S save(@NonNull S Destination);
+    <S extends Destinations> S save(@NonNull S destination);
 
     // Check if a user with a specific ID exists (already provided by JpaRepository)
     @Override
@@ -36,8 +36,8 @@ public interface IDestinationsRepository extends JpaRepository<Destinations, Lon
     // Additional application-specific methods:
 
     // Search for a user by their email
-    Optional<Destinations> findByEmail(String email);
+    Optional<Destinations> findByName(String name);
 
     // Check if an email is already registered
-    boolean existsByEmail(String email);
+    boolean existsByName(String name);
 }

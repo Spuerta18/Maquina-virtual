@@ -4,9 +4,10 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
-@Table(name = "Searches")
+@Table(name = "Hotels")
 @Data
 public class Hotels {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
